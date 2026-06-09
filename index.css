@@ -686,6 +686,10 @@ img { max-width: 100%; display: block; }
   position: relative;
 }
 
+.experience-card:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
 .experience-card::before {
   content: '';
   position: absolute;

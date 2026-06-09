@@ -129,6 +129,7 @@
           <div class="skill-tags">
             <span class="skill-tag">Machine Learning</span>
             <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">Computer Vision</span>
             <span class="skill-tag">Transformers</span>
             <span class="skill-tag">Large Language Models</span>
             <span class="skill-tag">LLM Fine-tuning (LoRA)</span>
@@ -153,6 +154,8 @@
           <div class="skill-tags">
             <span class="skill-tag">PyTorch</span>
             <span class="skill-tag">Hugging Face</span>
+            <span class="skill-tag">YOLO (v8/v10/v11)</span>
+            <span class="skill-tag">CatBoost</span>
             <span class="skill-tag">LangGraph</span>
             <span class="skill-tag">llama.cpp</span>
             <span class="skill-tag">Weights &amp; Biases</span>
@@ -179,6 +182,60 @@
     <div class="container">
       <h2 class="section-title reveal">Projects</h2>
       <div class="projects-grid reveal">
+
+        <div class="project-card" data-project="dyneye">
+          <div class="project-header">
+            <span class="project-icon">☉</span>
+            <h3>DYN-EYE</h3>
+            <p class="project-subtitle">Autonomous Defect Discovery Pipeline</p>
+          </div>
+          <p class="project-desc">
+            An end-to-end self-improving visual inspection system. Uses YOLO for detecting known defects, DINOv2 and FAISS to filter novel anomalies, HDBSCAN to group them, and Gemini VLM to auto-label them, enabling automated closed-loop model retraining.
+          </p>
+          <div class="project-highlights">
+            <span>LangGraph</span>
+            <span>YOLOv8/v10/v11</span>
+            <span>DINOv2 Embeddings</span>
+            <span>FAISS Filter</span>
+            <span>HDBSCAN</span>
+            <span>Gemini VLM</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-project="qsystem">
+          <div class="project-header">
+            <span class="project-icon">⎔</span>
+            <h3>QSystem</h3>
+            <p class="project-subtitle">Leakage-Aware Forecasting &amp; Backtesting</p>
+          </div>
+          <p class="project-desc">
+            An end-to-end machine learning pipeline for probabilistic event prediction in noisy time-series environments. Integrates statistical feature engineering, Gaussian HMM regime detection, news sentiment analysis, and strict walk-forward temporal validation to eliminate data leakage.
+          </p>
+          <div class="project-highlights">
+            <span>CatBoost</span>
+            <span>Gaussian HMM</span>
+            <span>FinBERT</span>
+            <span>Optuna</span>
+            <span>Walk-Forward Validation</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-project="nabh-gap-analysis">
+          <div class="project-header">
+            <span class="project-icon">☱</span>
+            <h3>NABH Gap Analysis</h3>
+            <p class="project-subtitle">Healthcare Accreditation Platform</p>
+          </div>
+          <p class="project-desc">
+            A digital compliance and assessment platform mapping healthcare organization standard operating procedures (SOPs) against National Accreditation Board for Hospitals (NABH) standards. Features structured self-assessment modules, compliance scoring, and automated action plans.
+          </p>
+          <div class="project-highlights">
+            <span>Python &amp; NLP</span>
+            <span>Compliance Mapping</span>
+            <span>Analytics Dashboard</span>
+            <span>Report Generation</span>
+          </div>
+        </div>
 
         <div class="project-card" data-project="tinyllm">
           <div class="project-header">
@@ -298,6 +355,28 @@
   <section id="experience" class="section">
     <div class="container">
       <h2 class="section-title reveal">Experience</h2>
+
+      <div class="experience-card reveal">
+        <div class="exp-role">Innovation Graduate Trainee</div>
+        <div class="exp-company">Forge Innovation and Ventures &bull; Jan &mdash; June 2026</div>
+        <div class="exp-desc">
+          Led and deployed advanced AI/ML systems focusing on industrial automation, time-series analysis, and digital transformation.
+          <ul style="margin-left: 1.25rem; margin-top: 0.5rem; margin-bottom: 1rem; list-style-type: disc;">
+            <li><strong>DYN-EYE:</strong> Led a team of 6 as Project &amp; Tech Lead to deploy an autonomous anomaly discovery pipeline using LangGraph, YOLO, VLM-Autonomous annotation, and FAISS-based vector filtering to isolate novel manufacturing defects. Engineered a self-improving ML workflow utilizing dynamic VLM prompting, HDBSCAN clustering, and Intra-Cluster Consistency (ICC) metrics to automatically label and retrain models with minimal human oversight.</li>
+            <li><strong>QSystem:</strong> Designed a leakage-aware probabilistic event prediction and walk-forward backtesting pipeline using Hidden Markov Models (HMM), CatBoost, and FinBERT sentiment scoring to eliminate lookahead bias in noisy environments.</li>
+            <li><strong>NABH Gap Analysis:</strong> Engineered a digital assessment and gap-analysis platform mapping hospital standard operating procedures (SOPs) against National Accreditation Board for Hospitals (NABH) standards.</li>
+          </ul>
+        </div>
+        <div class="exp-tags">
+          <span>LangGraph</span>
+          <span>YOLOv8/v10/v11</span>
+          <span>DINOv2 &amp; FAISS</span>
+          <span>HMM &amp; CatBoost</span>
+          <span>Gemini VLM</span>
+          <span>NLP</span>
+        </div>
+      </div>
+
       <div class="experience-card reveal">
         <div class="exp-role">Machine Learning Engineer Intern</div>
         <div class="exp-company">The Fusion Apps</div>
