@@ -5,6 +5,7 @@ import { CustomCursor } from "./components/UI/CustomCursor";
 import { BackgroundGrid } from "./components/UI/BackgroundGrid";
 import { Landing } from "./components/Sections/Landing";
 import { ProjectPanel } from "./components/UI/ProjectPanel";
+import { ProjectsGrid } from "./components/Sections/ProjectsGrid";
 import { AboutTimeline } from "./components/Sections/AboutTimeline";
 import { SkillsConstellation } from "./components/Sections/SkillsConstellation";
 import { GitExperience } from "./components/Sections/GitExperience";
@@ -42,6 +43,9 @@ export const App: React.FC = () => {
 
         {/* Scrollable details sections */}
         <div className="w-full bg-gradient-to-b from-transparent via-[#050507] to-background">
+          {/* Projects Traditional Catalog */}
+          <ProjectsGrid onProjectSelect={handleNodeSelect} />
+
           {/* About Milestone Progression */}
           <AboutTimeline />
 
