@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #020204;
+  --color-panel: #07070a;
+  --color-border: #14141c;
+  --color-primary: #ffffff;
+  --color-secondary: #94a3b8;
+  
+  --color-accent-blue: #2563eb;
+  --color-accent-cyan: #0891b2;
+  --color-accent-emerald: #059669;
+  
+  --color-system-gray: #0f0f13;
+  --color-system-darkGray: #050507;
+  --color-system-lightGray: #1e1e26;
+
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Source Code Pro", "JetBrains Mono", monospace;
+  
+  --animate-pulse-glow: pulseGlow 3s infinite ease-in-out;
+  --animate-scanline: scanline 12s linear infinite;
+  --animate-fade-in-up: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-spin-slow: spin 25s linear infinite;
+
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.25; transform: scale(1); }
+    50% { opacity: 0.75; transform: scale(1.03); }
+  }
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(15px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  body {
+    @apply bg-background text-primary font-sans overflow-x-hidden antialiased;
+    cursor: none; /* Hide default cursor globally */
+  }
+
+  /* Force pointer cursor hide on all links and buttons for custom cursor replacement */
+  a, button, [role="button"], select, input, textarea, canvas {
+    cursor: none !important;
+  }
+  
+  /* Selection Highlight */
+  ::selection {
+    @apply bg-accent-cyan/35 text-white;
+  }
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020204;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #14141c;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e1e26;
+}
+
+/* Premium OS Glassmorphic Utilities with Gradient Borders */
+.glass-panel {
+  @apply bg-black/50 border border-white/5 backdrop-blur-xl transition-all duration-300;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+}
+
+.glass-panel:hover {
+  @apply border-white/10 bg-black/60;
+  box-shadow: 0 0 25px rgba(8, 145, 178, 0.12);
+}
+
+.shadow-neon-glow {
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+}
+
+/* Premium gradient reflections overlay */
+.card-reflection {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-reflection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 0%), rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 60%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card-reflection:hover::before {
+  opacity: 1;
+}
